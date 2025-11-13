@@ -21,7 +21,7 @@ header nav a {
   padding: 5px;
 }
 
-header nav a, .input input {
+header nav a, .input , .send {
   color: #fff;
   font-size: 14px;
 }
@@ -31,28 +31,48 @@ header, .input {
 }
 
 main {
+  display: flex;
   background-color: #292929;
+  height: 900px;
+}
+
+.input, .send {
+  border-radius: 10px;
 }
 
 .input {
-  display: flex;
-  border-radius: 10px;
   justify-self: center;
   margin: 50px;
   width: 400px;
-  height: 200px;
+  height: 175px;
+}
+
+.upload, .send {
+  position: relative;
+}
+
+.upload {
+  left: 2.5%;
+  top: 2.5%;
+}
+
+.send {
+  left: 82.5%;
+  bottom: 20%;
+  padding: 5px 20px;
+  height: 40px;
+  background-color: #008cff;
 }
 
 textarea {
   background: none;
   padding: 10px;
   width: 99%;
-  height: 80%
+  height: 80%;
+  resize: none;
 }
 
 .icon {
   border-radius: 50%;
-  background: no-repeat;
-  background-image: "../media/profile_pic.png";
   background-color: #008cff;
 }
