@@ -15,11 +15,11 @@ class User {
   }
 
   getInfo() {
-
+    return [this.#name, this.#userName, this.#email, this.#id];
   }
 }
 
-class Subscriber extends User{
+class Subscriber extends User {
   #groups = [];
   #pages = [];
   #canMonetize = false;
@@ -36,7 +36,8 @@ const send = document.querySelector(".send");
 const target = document.querySelector(".target");
 const post = document.querySelector(".post");
 const inputText = document.querySelector(".inputText");
-const user = new User("Rone", "RoninTheDev", "Gamewarrior1andbowser@gmail.com", "RoninTheDev")
+const user = new Subscriber("Rone", "RoninTheDev", "Gamewarrior1andbowser@gmail.com", "RoninTheDev", ['Kirby', 'Programming', 'game development'], ['Siege of Popstar'], false);
+const settings = document.getElementById("userInfo");
 
 function publish(text, image, time, publisher) {
   if (image == "" && text == "") {
@@ -52,6 +53,9 @@ function publish(text, image, time, publisher) {
   target.files = null; 
 }
 
+let data = user.getInfo();
+
+
 send.addEventListener('click', function() {
   let inputImg = "";
   if (target.files[0] != null) {
@@ -63,4 +67,6 @@ send.addEventListener('click', function() {
   let name = user.getUserName();
   publish(inputText.value, inputImg, time, name);
 })
-
+settings.addEventListener('click', function() {
+  
+})

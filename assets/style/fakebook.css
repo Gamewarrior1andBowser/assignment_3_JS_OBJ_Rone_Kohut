@@ -9,34 +9,36 @@
   transition: 0.25s;
 }
 
-header {
+.menu {
   display: flex;
   justify-content: space-around;
-  padding: 10px 0px;
 }
 
-header h1 {
+.menu h1 {
   color: #008cff;
 }
 
-header nav a {
+.menu nav a {
   line-height: 50px;
   font-size: 14px;
   padding: 5px;
 }
 
-header nav a, .inputText, .send {
+.menu nav a, .inputText, .send {
   color: #fff;
   font-size: 14px;
 }
 
-header, .input {
+.menu, .input {
   background-color: #3a3a3a;
+}
+
+header, main {
+  background-color: #292929;
 }
 
 main {
   display: flex;
-  background-color: #292929;
   min-height: 900px;
 }
 
@@ -46,7 +48,7 @@ main {
 
 .input {
   justify-self: center;
-  margin: 20px 0px;
+  margin: -160px 0px 10px;
   width: 400px;
   height: 175px;
 }
@@ -93,6 +95,16 @@ main {
 
 .chatInfo {
   top: 30%
+}
+
+.settings {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.visible {
+  visibility: visible;
 }
 
 .date {
@@ -149,8 +161,6 @@ main {
 .chat .icon {
   position: absolute;
 }
-
-
 
 /*Got from stack overflow to remove the default upload button*/
 ::file-selector-button {
