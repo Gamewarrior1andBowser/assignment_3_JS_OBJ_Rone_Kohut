@@ -15,7 +15,8 @@ class User {
   }
 
   getInfo() {
-    return [this.#name, this.#userName, this.#email, this.#id];
+    let info = Array(this.#name, this.#userName, this.#email, this.#id);
+    return info;
   }
 }
 
@@ -36,8 +37,12 @@ const send = document.querySelector(".send");
 const target = document.querySelector(".target");
 const post = document.querySelector(".post");
 const inputText = document.querySelector(".inputText");
-const user = new Subscriber("Rone", "RoninTheDev", "Gamewarrior1andbowser@gmail.com", "RoninTheDev", ['Kirby', 'Programming', 'game development'], ['Siege of Popstar'], false);
+const user = new Subscriber("Rone Kohut", "RoninTheDev", "Gamewarrior1andbowser@gmail.com", "RoninTheDev", ['Kirby', 'Programming', 'game development'], ['Siege of Popstar'], false);
 const settings = document.getElementById("userInfo");
+const profile = document.querySelector(".profile");
+const name = document.querySelector(".name");
+const userName = document.querySelector(".userName");
+const email = document.querySelector(".email");
 
 function publish(text, image, time, publisher) {
   if (image == "" && text == "") {
@@ -50,7 +55,6 @@ function publish(text, image, time, publisher) {
     feed.innerHTML += `<div class="chat"><div class="chatHeader"><div class="icon"></div><h3 class="userName">${publisher}</h3><h4 class="date">${time}</h4></div><div class="chatInfo"><p class="text">${text}</p><img class="chatImg" src=${image}></div></div>`;
   }
   inputText.value = "";
-  target.files = null; 
 }
 
 let data = user.getInfo();
@@ -68,5 +72,9 @@ send.addEventListener('click', function() {
   publish(inputText.value, inputImg, time, name);
 })
 settings.addEventListener('click', function() {
-  
+  let userData = user.getInfo();
+  userName.textContent = userData[1];
+  name.textContent = userData[0];
+  email.textContent = userData[2];
+  profile.classList.toggle('visible');
 })

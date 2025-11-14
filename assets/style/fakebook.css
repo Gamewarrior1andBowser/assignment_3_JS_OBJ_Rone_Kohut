@@ -5,7 +5,7 @@
   width: min(100% - 30px, 1080px);
 }
 
-* {
+main * {
   transition: 0.25s;
 }
 
@@ -16,6 +16,15 @@
 
 .menu h1 {
   color: #008cff;
+}
+
+.menu .icon {
+  position: relative;
+  top: 4px;
+}
+
+.menu .icon:hover {
+  border: 1px solid #fff;
 }
 
 .menu nav a {
@@ -42,13 +51,13 @@ main {
   min-height: 900px;
 }
 
-.input, .send, .chat {
+.input, .send, .chat, .profile {
   border-radius: 10px;
 }
 
 .input {
   justify-self: center;
-  margin: -160px 0px 10px;
+  margin: -180px 0px 30px;
   width: 400px;
   height: 175px;
 }
@@ -74,7 +83,7 @@ main {
   width: 400px;
   justify-self: center;
   padding: 5px;
-  margin: 10px 0px;
+  margin: 30px 0px;
 }
 
 .chat .userName {
@@ -97,14 +106,18 @@ main {
   top: 30%
 }
 
-.settings {
-  position: relative;
+.profile {
   width: 200px;
   height: 200px;
+  background-color: #5c5c5c;
+  justify-self: end;
+  z-index: 3;
+  padding: 5px;
+  visibility: hidden;
 }
 
-.visible {
-  visibility: visible;
+.profile * {
+  padding: 5px 0px;
 }
 
 .date {
@@ -114,7 +127,7 @@ main {
   top: 1%;
 }
 
-.chat .userName, .chat, .upload, .send {
+.profile, .chat .userName, .chat, .upload, .send {
   position: relative;
 }
 
@@ -160,6 +173,10 @@ main {
 
 .chat .icon {
   position: absolute;
+}
+
+.visible {
+  visibility: visible;
 }
 
 /*Got from stack overflow to remove the default upload button*/
