@@ -21,7 +21,7 @@ header nav a {
   padding: 5px;
 }
 
-header nav a, .input , .send {
+header nav a, textarea , .send {
   color: #fff;
   font-size: 14px;
 }
@@ -36,7 +36,7 @@ main {
   height: 900px;
 }
 
-.input, .send {
+.input, .send, .chat {
   border-radius: 10px;
 }
 
@@ -47,13 +47,58 @@ main {
   height: 175px;
 }
 
-.upload, .send {
+.upload {
+  left: 2.5%;
+  color: #fff;
+}
+
+.chat {
+  background-color: #fff;
+  color: #000;
+  width: 400px;
+  justify-self: center;
+  padding: 5px;
+}
+
+.chat .userName {
+  left: 10%;
+}
+
+.chat .userName, .date {
+  line-height: 15px;
+  padding: 10px;
+  height: min(40px);
+  width: max(200px);
+}
+
+.chatHeader {
+  height: 40px;
+  width: 380px;
+}
+
+.chatInfo {
+  top: 30%
+}
+
+.date {
+  position: absolute;
+  left: 67.5%;
+  width: 130px;
+  top: 1%;
+}
+
+.chat .userName, .chat, .upload, .send {
   position: relative;
 }
 
-.upload {
-  left: 2.5%;
-  top: 2.5%;
+.text {
+  width: 380px;
+  padding: 10px;
+}
+
+.chatImg {
+  width: 380px;
+  justify-self: center;
 }
 
 .send {
@@ -74,5 +119,13 @@ textarea {
 
 .icon {
   border-radius: 50%;
-  background-color: #008cff;
+  background-image: url(../media/ico.png);
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
+
+.chat .icon {
+  position: absolute;
 }
