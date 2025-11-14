@@ -5,6 +5,10 @@
   width: min(100% - 30px, 1080px);
 }
 
+* {
+  transition: 0.25s;
+}
+
 header {
   display: flex;
   justify-content: space-around;
@@ -21,7 +25,7 @@ header nav a {
   padding: 5px;
 }
 
-header nav a, textarea , .send {
+header nav a, .inputText, .send {
   color: #fff;
   font-size: 14px;
 }
@@ -33,7 +37,7 @@ header, .input {
 main {
   display: flex;
   background-color: #292929;
-  height: 900px;
+  min-height: 900px;
 }
 
 .input, .send, .chat {
@@ -42,7 +46,7 @@ main {
 
 .input {
   justify-self: center;
-  margin: 50px;
+  margin: 20px 0px;
   width: 400px;
   height: 175px;
 }
@@ -50,7 +54,17 @@ main {
 .upload {
   left: 2.5%;
   color: #fff;
+  
 }
+
+.target {
+  width: 300px;
+}
+
+.upload:hover {
+  color: #bbb;
+}
+
 
 .chat {
   background-color: #fff;
@@ -58,6 +72,7 @@ main {
   width: 400px;
   justify-self: center;
   padding: 5px;
+  margin: 10px 0px;
 }
 
 .chat .userName {
@@ -98,6 +113,7 @@ main {
 
 .chatImg {
   width: 380px;
+  padding: 5px 0px 0px;
   justify-self: center;
 }
 
@@ -109,7 +125,11 @@ main {
   background-color: #008cff;
 }
 
-textarea {
+.send:hover {
+  background-color: #006bc2;
+}
+
+.inputText {
   background: none;
   padding: 10px;
   width: 99%;
@@ -128,4 +148,11 @@ textarea {
 
 .chat .icon {
   position: absolute;
+}
+
+
+
+/*Got from stack overflow to remove the default upload button*/
+::file-selector-button {
+  display: none;
 }
